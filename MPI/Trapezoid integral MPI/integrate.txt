@@ -1,0 +1,34 @@
+in assignment1-part1 //hello
+i use the
+MPI_Init // to tell MPI system to do all of the  necessary  setup
+ MPI_Comm_rank //the calling process in the communicator
+and MPI_Comm_size //number of process in communicator
+and give each process message to print it out
+
+in assignment1-part2 //target.cpp  << section 1>>
+	
+	computing trapezoid integral in serial version , normal calling of function 
+	and include header file of function that we compute tapezoid on it
+
+in assignment1-part2 //mpi_integrate_v1.cpp  << section 2>>
+
+	
+	include header file of function that we compute tapezoid on it
+	, check if parameter in comand line > 2 to  print out the result of 
+	trapezoid on screen, 
+	using MPI_Send to send local_integral that each process compute it to 
+	the root process(0) , and the root process apply  summation on local integral
+	to produce the total integral after recive them  
+	
+in assignment1-part2 //mpi_integrate_v2.cpp  << section 3>>
+
+		i do all the steps in the previous section but using MPI_ANY_SOURCE
+
+
+
+in assignment1-part2 //mpi_integrate_v3.cpp << section 4>> 
+
+	
+	i used MPI_Resduce alternatively of MPI_Send & MPI_Recv to compute trapezoid 
+	using MPI_SUM operator , that do the job of All MPI in section 2 and 3 in 
+	shortly way

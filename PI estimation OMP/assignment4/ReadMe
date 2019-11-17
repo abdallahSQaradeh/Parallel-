@@ -1,0 +1,4 @@
+when i print each random value, the result of pi shown as 3.14 and some fraction.
+but when i wrapped the print statement as comment, the result shown as 3.085655 or 3.10222 ... etc
+i don't know why is that! 
+but i hope to achive fullmark.

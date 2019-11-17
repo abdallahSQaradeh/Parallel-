@@ -1,0 +1,13 @@
+Serial_program:
+i was read the first 2 element of oimage.txt file that describe rows and columns in the image
+then i create 2 array the first one store the values that i read from the file , and the secon one to store values on it , then i read the filter file and store it on another array of 3*3 ,
+i made algorithm consist of 4 loops the first 2 loop to walk thru the orgin image file , the second 2 loops to shift the mask aove the origin image , while i compute the value i print it on another file 
+
+Parallel_program:
+i did the serial step and put additional issues to make it parallel using pthread
+first : i check the number of thread with rows in the origin image ,and decide the number of thread according to the result that i compute , then create these thread and call applyFilter for every thread ,i was used technique that distribute rows on thread in equal way but if the remainder  of number of rows divide by number of thread not equal to zero , i make the last thread handle the additional remainder ,
+before i finish , i print the value of array that i modify it on outputfile,
+ut thrads are interleaving , so mybe the result not like we think
+
+speed up and performence are on the screeen 
+
